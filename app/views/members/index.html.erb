@@ -1,0 +1,25 @@
+<h1>Listing members</h1>
+
+<%= link_to 'New Member', new_member_path, class: "button radius" %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.name %></td>
+        <td><%= member.email %></td>
+        <td><%= link_to 'Profile', member %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

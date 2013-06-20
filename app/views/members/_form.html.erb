@@ -1,0 +1,29 @@
+<%= form_for(@member) do |f| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row collapse">
+  <div class="small-3 columns">
+    <%= f.label :name, class: "right inline", title: "ex. Joe Schmo", data: {tooltip: true} %>
+  </div>
+  <div class="small-9 columns"><%= f.text_field :name %></div>
+</div>
+<div class="row collapse">
+  <div class="small-3 columns">
+    <%= f.label :email, class: "right inline", title: "ex. Joe@gmail.com", data: {tooltip: true} %>
+  </div>
+  <div class="small-9 columns"><%= f.text_field :email %></div>
+</div>
+<div class="row collapse">
+  <div class="small-9 small-offset-3 columns"><%= f.submit %></div>
+</div>
+<% end %>
