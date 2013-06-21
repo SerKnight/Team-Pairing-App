@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+  attr_accessor :name, :email, :team_id
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -6,6 +7,8 @@ class MembersController < ApplicationController
   end
 
   def show
+    @member = Member.find(params[:id])
+    @teams = Team.all
   end
 
   def new
@@ -15,12 +18,17 @@ class MembersController < ApplicationController
   def edit
   end
 
-  def create
-    @member = Member.new(member_params)
+  def update
+    
+    @member = Member.find(params[:id])
+    @member.update_attributes(params[:team_id])
+    redirect_to members_path, notice: 'Member added to team.'
   end
 
- 
- 
+  def create
+    @member = Member.create(member_params)
+    redirect_to member_path(@member)
+  end 
 
   def destroy
     @member.destroy

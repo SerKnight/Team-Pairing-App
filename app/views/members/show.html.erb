@@ -10,5 +10,15 @@
   <%= @member.email %>
 </p>
 
+<div>
+  <%= form_for(@member) do |f| %>
+    <%= f.label "Select a Team" %> 
+<!-- not working -->
+    <%= f.collection_select :team_id, Team.order(:id), :id, :name %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
+

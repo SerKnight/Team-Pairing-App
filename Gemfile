@@ -16,3 +16,5 @@ end
 
 gem 'zurb-foundation'
 gem 'rspec-rails'
+gem 'better_errors'
+gem 'binding_of_caller'
