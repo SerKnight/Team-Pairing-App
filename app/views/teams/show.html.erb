@@ -1,9 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @team.name %>
+  <h3>Team: <strong><%= @team.name %></strong></h3>
+  <% @team.members.each do |member| %>
+    <h5>Members:</h5>
+    <%= member.name %>
+  <% end %>
 </p>
+<%= link_to 'Edit', edit_team_path(@team), class: "button small" %> |
+<td><%= link_to 'Destroy', team_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "alert button small" %></td> 
+<br>
+<hr>
+<br>
+<%= link_to 'Back', teams_path, class: "button" %>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+
+        

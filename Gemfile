@@ -15,7 +15,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'zurb-foundation'
-gem 'rspec-rails'
-gem 'better_errors'
-gem 'binding_of_caller'
+group :test do 
+  gem 'zurb-foundation'
+  gem 'rspec-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
