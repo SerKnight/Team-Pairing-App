@@ -18,13 +18,24 @@
     <%= csrf_meta_tags %>
   </head>
 
+
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
         <h1><%= link_to "People Person", members_path %></a></h1>
       </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
+
     <section class="top-bar-section">
+      <ul class="left">
+        <li class="divider"></li>
+        <li class="active"><a href="#">Main Item 1</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Main Item 2</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Main Item 3</a>
+      </ul>
       <ul class="right">
         <li class="divider"></li>
         <li><%= link_to "People", members_path %></li>
@@ -33,7 +44,7 @@
         <li class="divider"></li>
         <li><%= link_to "Organize 1 + 1's" %></li>
       </ul>
-    </div>
+    </section>
   </nav>
 
   <body>
