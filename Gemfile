@@ -15,7 +15,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test do 
+group :development do 
   gem 'zurb-foundation'
   gem 'rspec-rails'
   gem 'better_errors'

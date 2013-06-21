@@ -10,23 +10,29 @@
 </p>
 
 <p>
-  <strong>Team:</strong>
+  <strong>Team(s):</strong>
+  <div class="teams">
+    <% @member.teams.all.each do |team| %>
+      <ul>
+        <li><%= team.name %></li>
+      </ul>
+    <% end %>
+  </div>
 </p>
 
 
 <div>
   <%= form_for(@member) do |f| %>
-    <%= f.label "Select a Team" %> 
     <% @teams.each do |team|  %>
     <div>
       <%= check_box_tag "member[team_ids][]", team.id, @member.teams.include?(team.id) %>
       <%= team.name %>
     </div>
     <% end %>
-    <%= f.submit %>
+    <%= f.submit "Add to Team" %>
   <% end %>
 </div>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<%= link_to 'Edit', edit_member_path(@member), class: "alert button small" %> |
+<%= link_to 'Back', members_path, class: "button small" %> 
 

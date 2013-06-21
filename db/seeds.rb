@@ -1,19 +1,19 @@
 Team.delete_all
 Team.create([
-        { name: 'agile' },
-        { name: 'tdd' },
-        { name: 'github' },
-        { name: 'IFTTT' },
-        { name: 'SanFran' },
-        { name: 'Sisco' },
-        { name: 'HotDogs' },
-        { name: 'Green' },
-        { name: 'Blue' },
-        { name: 'Silver' },
-        { name: 'Teamster' },
-        { name: 'Ramrod' },
-        { name: 'WOahBros' },
-        { name: 'BoatPeople' }
+        { name: 'agile', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'tdd', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'github', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'IFTTT', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'SanFran', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'Sisco', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'HotDogs', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'Green', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'Blue', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'Silver', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'Teamster', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'Ramrod', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'WOahBros', description: "This is a team description, generall 1 sentence about the team's mantra" },
+        { name: 'BoatPeople', description: "This is a team description, generall 1 sentence about the team's mantra" }
 ])
 
 

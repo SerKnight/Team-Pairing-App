@@ -21,6 +21,24 @@ $em-base: 16px !default;
   @return $pxWidth / $em-base * 1em;
 }
 
+
+
+.teams {
+  padding-left: 100px;
+}
+
+#notice {
+  color: green;
+  text-border: black;
+  text-align: center;
+  margin: 10px auto;
+  padding: 5px 20px;
+}
+
+
+
+
+
 // Change whether or not you include browser prefixes
 // $experimental: true;
 
