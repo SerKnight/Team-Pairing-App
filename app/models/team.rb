@@ -1,5 +1,6 @@
 class Team < ActiveRecord::Base
-  has_many :members, :through => :team_mates
+  has_and_belongs_to_many :members 
+  accepts_nested_attributes_for :members
 
   validates :name,
   :presence   => true,

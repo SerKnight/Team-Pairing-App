@@ -4,17 +4,25 @@
   <strong>Name:</strong>
   <%= @member.name %>
 </p>
-
 <p>
   <strong>Email:</strong>
   <%= @member.email %>
 </p>
 
+<p>
+  <strong>Team:</strong>
+</p>
+
+
 <div>
   <%= form_for(@member) do |f| %>
     <%= f.label "Select a Team" %> 
-<!-- not working -->
-    <%= f.collection_select :team_id, Team.order(:id), :id, :name %>
+    <% @teams.each do |team|  %>
+    <div>
+      <%= check_box_tag "member[team_ids][]", team.id, @member.teams.include?(team.id) %>
+      <%= team.name %>
+    </div>
+    <% end %>
     <%= f.submit %>
   <% end %>
 </div>

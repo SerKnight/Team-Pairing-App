@@ -31,23 +31,11 @@ class TeamsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @team.update(team_params)
-        format.html { redirect_to @team, notice: 'Team was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @team.errors, status: :unprocessable_entity }
-      end
-    end
+    @team.update(team_params)
   end
 
   def destroy
     @team.destroy
-    respond_to do |format|
-      format.html { redirect_to teams_url }
-      format.json { head :no_content }
-    end
   end
 
   private
@@ -56,6 +44,6 @@ class TeamsController < ApplicationController
     end
 
     def team_params
-      params.require(:team).permit(:name)
+      params.require(:team).permit(:name, :member_id)
     end
 end

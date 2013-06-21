@@ -19,10 +19,14 @@ class MembersController < ApplicationController
   end
 
   def update
-    
+    params[:member][:team_ids] ||= []
     @member = Member.find(params[:id])
-    @member.update_attributes(params[:team_id])
-    redirect_to members_path, notice: 'Member added to team.'
+    if @member.update_attributes(:team_ids => params[:member][:team_ids])
+      flash[:notice] = "Member Information Updated"
+      redirect_to members_path
+    else
+      redirect_to members_path
+    end
   end
 
   def create
@@ -32,20 +36,14 @@ class MembersController < ApplicationController
 
   def destroy
     @member.destroy
-    respond_to do |format|
-      format.html { redirect_to members_url }
-      format.json { head :no_content }
-    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_member
       @member = Member.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:name, :email)
+      params.require(:member).permit(:name, :email, :team_id)
     end
 end

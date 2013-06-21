@@ -14,10 +14,13 @@
   <tbody>
     <% @members.each do |member| %>
       <tr>
-        <td><%= member.name %></td>
+        <td><%= link_to member.name, member %></td>
         <td><%= member.email %></td>
-        <td><%= member.team_id %></td>
-        <td><%= link_to 'Profile', member %></td>
+        <% member.teams.all.each do |team| %>
+        <td><%= team.name %></td>
+        <% end %>
+        <td></td>
+        <td></td>
       </tr>
     <% end %>
   </tbody>
