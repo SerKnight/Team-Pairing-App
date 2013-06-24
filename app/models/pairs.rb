@@ -1,16 +1,15 @@
 class Pairs
   attr_accessor :team
+  attr_reader :past_pairs
 
-  def initialize(team)
+  def initialize(team, past_pairs)
     @team = team
+    @past_pairs = past_pairs
   end
 
   def match
-    pairs = []
     teammates = team.members
-      pairs << teammates.sample.name
-      pairs << teammates.sample.name
-    pairs
+    teammates.each_slice(2).to_a
   end
 
 end
