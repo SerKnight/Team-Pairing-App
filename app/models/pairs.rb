@@ -8,9 +8,8 @@ class Pairs
   def match
     pairs = []
     teammates = team.members
-    teammates.collect do |member|
-      pairs << member.name
-    end
+      pairs << teammates.sample.name
+      pairs << teammates.sample.name
     pairs
   end
 

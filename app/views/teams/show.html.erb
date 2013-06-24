@@ -2,10 +2,14 @@
 
 <p>
   <h3>Team: <strong><%= @team.name %></strong></h3>
-  <h6>Description: <strong><%= @team.description %></strong></h6>
+  Description: <strong><%= @team.description %></strong>
+  <hr>
+Members:
   <% @team.members.each do |member| %>
-    <h6>Members:</h6>
-    <%= member.name %>
+    <li>
+      <%= member.name %>
+    </li>
+    <br/>
   <% end %>
 </p>
 <%= link_to 'Edit', edit_team_path(@team), class: "button small" %> |
