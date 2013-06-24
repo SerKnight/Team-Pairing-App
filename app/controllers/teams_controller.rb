@@ -32,6 +32,7 @@ class TeamsController < ApplicationController
 
   def update
     @team.update(team_params)
+    redirect_to team_path(@team)
   end
 
   def destroy
@@ -45,6 +46,6 @@ class TeamsController < ApplicationController
     end
 
     def team_params
-      params.require(:team).permit(:name, :member_id)
+      params.require(:team).permit(:name, :member_id, :description)
     end
 end

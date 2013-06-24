@@ -2,8 +2,9 @@
 
 <p>
   <h3>Team: <strong><%= @team.name %></strong></h3>
+  <h6>Description: <strong><%= @team.description %></strong></h6>
   <% @team.members.each do |member| %>
-    <h5>Members:</h5>
+    <h6>Members:</h6>
     <%= member.name %>
   <% end %>
 </p>

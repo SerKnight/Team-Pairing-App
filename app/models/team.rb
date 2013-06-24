@@ -3,6 +3,7 @@ class Team < ActiveRecord::Base
   accepts_nested_attributes_for :members
 
   validates_presence_of :description
+
   validates :name,
   :presence   => true,
   :length => { :maximum => 24 },

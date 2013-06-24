@@ -6,7 +6,7 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Team</th>
+      <th>Team(s)</th>
       <th></th>
     </tr>
   </thead>
@@ -16,9 +16,13 @@
       <tr>
         <td><%= link_to member.name, member %></td>
         <td><%= member.email %></td>
-        <% member.teams.all.each do |team| %>
-        <td><%= team.name %></td>
+        <% if member.teams.count == 0 %>
+          <td><%= link_to link_to "Add to Team", member %></td>
+        <% else %>
+          <% member.teams.all.each do |team| %>
+          <td><%= team.name %></td>
         <% end %>
+    <% end %>
         <td></td>
         <td></td>
       </tr>

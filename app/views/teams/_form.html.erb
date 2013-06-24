@@ -1,7 +1,7 @@
 <%= form_for(@team) do |f| %>
   <% if @team.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+      <h6><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h6>
 
       <ul>
       <% @team.errors.full_messages.each do |msg| %>
@@ -14,7 +14,18 @@
     <div class="small-3 columns">
       <%= f.label :name, class: "right inline", title: "A-Z / 1-9 / max 24 chars", data: {tooltip: true} %>
     </div>
-    <div class="small-9 columns"><%= f.text_field :name %></div>
+      <div class="small-9 columns">
+        <%= f.text_field :name %>
+      </div>
+  </div>
+  <div class="row collapse">
+    <div class="small-3 columns">
+      <%= f.label :description, class: "right inline" %>
+    </div>
+      <div class="small-9 columns">
+        <%= f.text_field :description %>
+      </div>
+    </div>
   </div>
   <div class="row collapse">
     <div class="small-9 small-offset-3 columns"><%= f.submit %></div>

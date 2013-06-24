@@ -23,7 +23,7 @@ class MembersController < ApplicationController
     @member = Member.find(params[:id])
     if @member.update_attributes(:team_ids => params[:member][:team_ids])
       flash[:notice] = "Member Information Updated"
-      redirect_to :back
+      redirect_to members_path
     else
       redirect_to members_path
     end
