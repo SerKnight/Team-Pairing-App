@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "creating 1-on-1 pairs" do 
+describe "pairs" do 
 
   before(:each) do 
     @team = Team.create( name: "test team", description: "we test teams")
@@ -12,18 +12,14 @@ describe "creating 1-on-1 pairs" do
     @past_pairs = [["Toph1", "Toph2"],["Toph3", "Toph4"],["Toph5", nil]]
   end
 
-  it "pairs 2 teammates on the same team" do 
-    Pairs.new(@team, @past_pairs).match.count.should == 3
-  end
-
-  it "pairs should not be the same person" do 
-    team_pairs = Pairs.new(@team, @past_pairs).match
-    expect(team_pairs[0]).to_not eq team_pairs[1]
-  end
-
   context "if there are 5 people in a team" do 
     it "should make three pairs with one solo" do
-      Pairs.new(@team, @past_pairs).match
+      Pairs.new(@team, @past_pairs).match.count.should == 3    
+    end
+
+    it "pairs should not be the same person" do 
+      team_pairs = Pairs.new(@team, @past_pairs).match
+      expect(team_pairs[0]).to_not eq team_pairs[1]
     end
   end
 end

@@ -4,6 +4,9 @@
   <h3>Team: <strong><%= @team.name %></strong></h3>
   Description: <strong><%= @team.description %></strong>
   <hr>
+  <div class="pair">
+    <%= button_to "Match Team?", {:controller => "pairs", :method => "match", :id => @team.id} %>
+  </div>
 Members:
   <% @team.members.each do |member| %>
     <li>
@@ -11,6 +14,9 @@ Members:
     </li>
     <br/>
   <% end %>
+
+
+
 </p>
 <%= link_to 'Edit', edit_team_path(@team), class: "button small" %> |
 <td><%= link_to 'Destroy', team_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "alert button small" %></td> 

@@ -11,5 +11,4 @@ class Pairs
     teammates = team.members
     teammates.each_slice(2).to_a
   end
-
 end
