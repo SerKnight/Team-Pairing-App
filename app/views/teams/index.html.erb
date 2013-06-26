@@ -1,13 +1,13 @@
-<h1>Listing teams</h1>
+<h1>Teams</h1>
 
-<%= link_to 'New Team', new_team_path, class: "button radius" %>
+<%= link_to 'New Team', new_team_path, class: "button radius small" %>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th>Team Profile</th>
+      <th>Team Info</th>
       <th></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= team.name %></td>
         <td><%= team.description %></td>
-        <td><%= link_to 'Team Page', team %></td>
+        <td><h6><%= link_to "Organize Pairs", team %></h6></td>
       </tr>
     <% end %>
   </tbody>

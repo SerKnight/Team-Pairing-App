@@ -1,28 +1,43 @@
-== README
+...WELCOME - To the People-Person - README...
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application designed for a single organization.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+______________________________________________________________
+Instructions:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+You Can:
+   - Create new Members with:
+        - a name
+        - Unique email address
+
+   - Create new Teams with:
+        - a name
+        - short description
+
+And most importantly, you can add members to multiple teams.
+
+When you visit each teams profile page, there is an option to:
+    
+    - "Organize Pairs"
+
+This will then trigger actions to create:
+  
+    - randomized pairs within each team
+    - emails to the entire team, displaying the pairs for that "week"
+       (a.k.a. whenever you click it)
+
+______________________________________________________________
+NittyGritty:
+
+Design:
+  I used foundation-zurb as the front-end framework. Its simplicity and grace made for easily navigable paths, essential in a simple application such as People-Person.
+
+Testing:
+  I used rspec & capybara, in addition to this sweet gem pair called "better_errors" & "binding_of_caller" to drive the TDD. 
+
+I have to admit this app is not the full spec of IFTTT. I got caught up in issues of structure when deciding how I should store the past_pairs in a DB table. I ended up taking the route of randomizing each set of pairs for clean completion purposes. 
+
+But hey, that is why I would love this apprenticeship!  
+To get better at software architechture and breaking down hard problems in ruby code :)
+

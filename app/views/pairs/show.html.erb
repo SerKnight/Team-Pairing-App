@@ -1,7 +1,10 @@
 <h1>This Week's Pairs for team <%= @team.name %></h1>
 
 <% if flash[:notice] %>
+  <hr>
   <div class="notice"><%= flash[:notice] %></div>
+  <hr>
+  <br>
 <% end %>
 
 <table>

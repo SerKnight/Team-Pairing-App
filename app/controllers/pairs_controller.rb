@@ -4,7 +4,7 @@ class PairsController < ApplicationController
     @pairs = Pairs.new(@team)
     @pairs.send_email
 
-    flash[:notice] = "Pairs Made"
+    flash[:notice] = "Great! Pairs are set for the week. The Team wil receive an email :)"
 
     render :show
   end

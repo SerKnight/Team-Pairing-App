@@ -2,12 +2,14 @@
 
 <p>
   <h3>Team: <strong><%= @team.name %></strong></h3>
-  Description: <strong><%= @team.description %></strong>
+  <h6>Description: </h6><i><%= @team.description %></i>
   <hr>
   <div class="pair">
-    <%= button_to "Match Team?", team_pairs_path(@team.id) %>
+    <%= button_to "Match Team?", team_pairs_path(@team.id), class: "button alert" %>
   </div>
 Members:
+<br>
+<br>
   <% @team.members.each do |member| %>
     <li>
       <%= member.name %>
@@ -19,11 +21,11 @@ Members:
 
 </p>
 <%= link_to 'Edit', edit_team_path(@team), class: "button small" %> |
-<td><%= link_to 'Destroy', team_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "alert button small" %></td> 
+<td><%= link_to 'Destroy', team_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "radius button small", id: "delete" %></td> 
 <br>
 <hr>
 <br>
-<%= link_to 'Back', teams_path, class: "button" %>
+<%= link_to 'Back', teams_path, class: "button small" %>
 
 
         

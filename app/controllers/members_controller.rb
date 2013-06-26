@@ -19,12 +19,10 @@ class MembersController < ApplicationController
   end
 
   def update
-    @member.update(member_params)
-    params[:member][:team_ids] ||= []
     @member = Member.find(params[:id])
-    if @member.update_attributes(:team_ids => params[:member][:team_ids])
-      flash[:notice] = "Member Information Updated"
-      redirect_to members_path
+    @member.update(member_params)
+    if params[:member] && @member.update_attributes(:team_ids => params[:member][:team_ids])
+      redirect_to members_path, :notice => "Member Information Updated"
     else
       redirect_to members_path
     end
@@ -32,11 +30,12 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.create(member_params)
-    redirect_to member_path(@member)
+    redirect_to member_path(@member), :notice => "Member Created"
   end 
 
   def destroy
     @member.destroy
+    redirect_to members_path
   end
 
   private
@@ -45,6 +44,6 @@ class MembersController < ApplicationController
     end
 
     def member_params
-      params.require(:member).permit(:name, :email, :team_id, :member)
+      params.require(:member).permit(:name, :email, :member)
     end
 end

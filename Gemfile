@@ -22,6 +22,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'dotenv-rails'
   gem 'binding_of_caller'
+  gem 'selenium-webdriver'
+  gem 'simplecov'
+  gem 'pry'
 end
 
 

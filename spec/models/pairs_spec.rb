@@ -14,11 +14,11 @@ describe "pairs" do
 
   context "if there are 5 people in a team" do 
     it "should make three pairs with one solo" do
-      Pairs.new(@team, @past_pairs).match.count.should == 3    
+      Pairs.new(@team).matches.count.should == 3
     end
 
     it "pairs should not be the same person" do 
-      team_pairs = Pairs.new(@team, @past_pairs).match
+      team_pairs = Pairs.new(@team).matches
       expect(team_pairs[0]).to_not eq team_pairs[1]
     end
   end

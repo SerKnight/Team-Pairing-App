@@ -3,3 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'back', @member, class: "button small" %> 
+<%= link_to 'Destroy', member_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "radius button small", id: "delete" %>
