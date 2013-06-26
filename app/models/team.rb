@@ -10,5 +10,3 @@ class Team < ActiveRecord::Base
   :uniqueness => true,
   :format     => { :with => /[a-zA-Z1-9]/ }
 end
-
-

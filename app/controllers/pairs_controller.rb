@@ -9,8 +9,3 @@ class PairsController < ApplicationController
     render :show
   end
 end
-
-
-# Notifier.welcome(david).deliver # sends the email
-# mail = Notifier.welcome(david)  # => a Mail::Message object
-# mail.deliver                    # sends the email
