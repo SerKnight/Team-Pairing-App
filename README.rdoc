@@ -2,7 +2,7 @@
 
 This is an application designed for a single organization.
 
-______________________________________________________________
+__________________________________
 Instructions:
 
 http://People-Person.herokuapp.com
