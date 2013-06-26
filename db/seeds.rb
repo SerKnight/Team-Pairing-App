@@ -11,7 +11,7 @@ Team.create([
 
 Member.delete_all
 Member.create([
-        { name: 'Kareem Grant', email: "rehposirhc46@gmail.com", team_ids: 1 },
+        { name: 'Kareem Grant', email: "rehpotsirhc46@gmail.com", team_ids: 1 },
         { name: 'Chris Knight', email: "member@mail.com", team_ids: 1 },
         { name: 'Daniel Mee', email: "member2@mail.com", team_ids: 1 },
         { name: 'Laura Steadman', email: "member3@mail.com", team_ids: 1 },
