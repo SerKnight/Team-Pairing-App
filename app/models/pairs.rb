@@ -1,6 +1,16 @@
 class Pairs
-  def self.build(team)
+  attr_reader :matches,
+              :team
+
+  def initialize(team)
+    @team = team
     randomized_teammates = team.members.shuffle
-    randomized_teammates.each_slice(2).to_a
+    @matches = randomized_teammates.each_slice(2).to_a
+  end
+
+  def send_email
+    team.members.each do |member|
+      PairsMailer.notify(member, self).deliver
+    end
   end
 end

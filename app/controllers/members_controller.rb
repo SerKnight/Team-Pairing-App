@@ -19,6 +19,7 @@ class MembersController < ApplicationController
   end
 
   def update
+    @member.update(member_params)
     params[:member][:team_ids] ||= []
     @member = Member.find(params[:id])
     if @member.update_attributes(:team_ids => params[:member][:team_ids])
@@ -44,6 +45,6 @@ class MembersController < ApplicationController
     end
 
     def member_params
-      params.require(:member).permit(:name, :email, :team_id)
+      params.require(:member).permit(:name, :email, :team_id, :member)
     end
 end

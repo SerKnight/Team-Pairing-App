@@ -15,11 +15,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do 
+group :development, :test do 
   gem 'zurb-foundation'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'better_errors'
+  gem 'dotenv-rails'
   gem 'binding_of_caller'
 end
 

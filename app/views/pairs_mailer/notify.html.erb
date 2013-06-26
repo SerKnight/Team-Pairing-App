@@ -1,9 +1,9 @@
-<h1>This Week's Pairs for team <%= @team.name %></h1>
-
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
-
+Hello <%= @member.name.titleize %>
+<br>
+<br>
+You are cordially invited on a 1-on-1 session.
+<hr>
+<h1>This Week's Pairs for team <%= @pairs.team.name %></h1>
 <table>
   <thead>
     <th>Member 1</th>
@@ -17,3 +17,7 @@
   </tr>
 <% end %>
 </table>
+<br>
+<hr>
+
+Be There or Be Square
