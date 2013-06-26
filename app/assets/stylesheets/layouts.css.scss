@@ -12,12 +12,7 @@ label.right {
   float:right;
 }
 
-#one {
-  float: right;
-  padding-left: 400px;
-  margin-top: -500px;
-  margin-right: -350px;
-}
+
 
 #delete {
   background-color: grey;
@@ -25,4 +20,11 @@ label.right {
 
 .reddit {
   float: right;
+}
+
+.brand {
+  margin-left: 860px;
+  border: 15px solid;
+  float: right;
+  margin-bottom: 20px;
 }

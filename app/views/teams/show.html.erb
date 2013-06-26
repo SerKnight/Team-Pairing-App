@@ -6,6 +6,7 @@
   <hr>
   <div class="pair">
     <%= button_to "Match Team?", team_pairs_path(@team.id), class: "button alert" %>
+    <p><i>This will take a minute...</i></p>
   </div>
 Members:
 <br>
@@ -16,6 +17,7 @@ Members:
     </li>
     <br/>
   <% end %>
+
 
 </p>
 <%= link_to 'Edit', edit_team_path(@team), class: "button small" %> |

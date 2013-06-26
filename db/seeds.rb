@@ -23,7 +23,7 @@ Member.create([
         { name: 'Devin Foley', email: "mboileman@mail.com", team_ids: [2, 1] },
         { name: 'Jeff Lee', email: "jlee@mail.com", team_ids: [2, 1] },
         { name: 'Kevin Ebaugh', email: "keshaluvr@mail.com", team_ids: [2, 1] },
-        { name: 'Lady', email: "pooch@mail.com", team_ids: 2 },
+        { name: 'Lady', email: "pooch@mail.com", team_ids: [1, 2, 3, 4] },
         { name: 'Sloane Sturzenegger', email: "thecodernator@mail.com", team_ids: 1 },
         { name: 'Leor Stern', email: "lordleor@mail.com", team_ids: 1 },
         { name: 'Linden Tibbets', email: "tibetbro@mail.com", team_ids: 1 },
@@ -31,5 +31,5 @@ Member.create([
         { name: 'Shiva Kilaru', email: "supreme_god@mail.com", team_ids: [2, 1] },
         { name: 'Alexander Tibbets', email: "tidbits@mail.com", team_ids: 2 },
         { name: 'Christopher Knight', email: "rehpotsirhc46@gmail.com", team_ids: 2 },
-        { name: 'Anthony Accomazzo', email: "A_mazzo@mail.com", team_ids: [2, 1] }
+        { name: 'Anthony Accomazzo', email: "anthony@ifttt.com", team_ids: [2, 1] }
 ])
