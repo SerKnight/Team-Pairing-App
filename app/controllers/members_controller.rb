@@ -3,7 +3,7 @@ class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 
   def index
-    @members = Member.all(:order => "created_at DESC")
+    @members = Member.all(:order => "created_at DESC").to_a
   end
 
   def show
