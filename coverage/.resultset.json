@@ -53,6 +53,24 @@
         null,
         null
       ],
+      "/Users/CK/projects/people_person/app/models/pairs.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        5,
+        5,
+        5,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/CK/projects/people_person/app/controllers/teams_controller.rb": [
         1,
         1,
@@ -113,20 +131,20 @@
         1,
         null
       ],
-      "/Users/CK/projects/people_person/app/models/pairs.rb": [
+      "/Users/CK/projects/people_person/app/controllers/pairs_controller.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null,
+        1,
         null,
         1,
-        5,
-        5,
-        5,
         null,
         null,
-        1,
-        1,
-        1,
+        null,
+        null,
         null,
         null,
         null
@@ -169,6 +187,7 @@
         null,
         1,
         0,
+        0,
         null,
         null,
         1,
@@ -180,27 +199,9 @@
         2,
         null,
         null
-      ],
-      "/Users/CK/projects/people_person/app/controllers/pairs_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1372217671
+    "timestamp": 1372277474
   },
   "Cucumber Features": {
     "coverage": {
