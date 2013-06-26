@@ -17,7 +17,7 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Team.new(team_params)
+    @team = Team.create(team_params)
 
     respond_to do |format|
       if @team.save
