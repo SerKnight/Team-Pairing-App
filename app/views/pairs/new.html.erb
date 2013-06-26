@@ -1,1 +1,8 @@
-Hello
+<h2>Team Up!</h2>
+<p><i>Here you can manually set team pairs, or you can wait till friday at 5PM when an email will be sent to each team member.</i></p>
+
+<% @teams.all.each do |team| %>
+<ul>
+  <li><h3><%= link_to team.name %></h3>
+    <%= team.description %> </li>
+<% end %>

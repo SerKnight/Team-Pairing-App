@@ -12,9 +12,9 @@ describe "creating a set of team pairs" do
   end
 
   it "lists out all the pairs when you click match" do 
-    visit '/pairs'
-    click_link "pair team 1"
-    expect(page).to have_content("You have made some pairs")
+    visit '/teams/1'
+    click_link "Match Team?"
+    expect(page).to have_content("Weekly Pairs")
   end
 
 end

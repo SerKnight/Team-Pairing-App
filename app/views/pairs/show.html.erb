@@ -1,0 +1,15 @@
+<h1>This Week's Pairs for team <%= @team.name %></h1>
+
+<table>
+  <thead>
+    <th>Member 1</th>
+    <th>Member 2</th>
+  </thead>
+<% @pairs.each do |pair| %>
+  <tr>
+  <% pair.each do |member| %>
+    <td><%= member.name %></td>
+  <% end %>
+  </tr>
+<% end %>
+</table>

@@ -1,6 +1,8 @@
 PeoplePerson::Application.routes.draw do
-  resources :teams
-  resources :pairs, :only => [:new, :index, :show]
+  resources :teams do
+    resources :pairs, :only => [:create, :show]
+  end
+
   resources :members
   root :to => "members#index"
 end

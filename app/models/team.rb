@@ -8,7 +8,7 @@ class Team < ActiveRecord::Base
   :presence   => true,
   :length => { :maximum => 24 },
   :uniqueness => true,
-  :format     => { :with => /[a-z]/ }
+  :format     => { :with => /[a-zA-Z1-9]/ }
 end
 
 

@@ -5,7 +5,7 @@
   Description: <strong><%= @team.description %></strong>
   <hr>
   <div class="pair">
-    <%= button_to "Match Team?", {:controller => "pairs", :method => "match", :id => @team.id} %>
+    <%= button_to "Match Team?", team_pairs_path(@team.id) %>
   </div>
 Members:
   <% @team.members.each do |member| %>

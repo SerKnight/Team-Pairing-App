@@ -7,7 +7,6 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
-    @pair = Pairs.new(@team.id, @past_pairs)
   end
 
   def new
