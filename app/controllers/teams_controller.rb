@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   def index
-    @teams = Team.all(:order => "created_at DESC").to_a
+    @teams = Team.all.to_a
   end
 
   def show
