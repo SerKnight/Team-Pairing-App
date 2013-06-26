@@ -5,6 +5,7 @@ This is an application designed for a single organization.
 ______________________________________________________________
 Instructions:
 
+http://People-Person.herokuapp.com
 
 You Can:
    - Create new Members with:
