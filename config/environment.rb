@@ -4,10 +4,10 @@ require File.expand_path('../application', __FILE__)
 PeoplePerson::Application.configure do
   
   ActionMailer::Base.smtp_settings = {
-  :user_name => ‘gschool’,
-  :password => ENV["EMAIL_PASSWORD"]
+  :user_name  => ENV['SENDGRID_USERNAME'],
+  :password   => ENV['SENDGRID_PASSWORD'],
   :domain => "http://people-person.herokuapp.com",
-  :address => ‘smtp.sendgrid.net’,
+  :address => "smtp.sendgrid.net",
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
