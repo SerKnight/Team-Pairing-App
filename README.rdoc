@@ -2,7 +2,7 @@
 
 This is an application designed for a single organization.
 
-__________________________________
+
 Instructions:
 
 http://People-Person.herokuapp.com
@@ -28,7 +28,7 @@ This will then trigger actions to create:
     - emails to the entire team, displaying the pairs for that "week"
        (a.k.a. whenever you click it)
 
-______________________________________________________________
+________________________
 NittyGritty:
 
 Design:
