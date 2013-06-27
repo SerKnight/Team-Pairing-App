@@ -17,7 +17,7 @@
         <td><%= link_to member.name, member %></td>
         <td><%= member.email %></td>
         <% if member.teams.count == 0 %>
-          <td><%= link_to link_to "Add to Team", member %></td>
+          <td><%= link_to "Add to Team", member %></td>
         <% else %>
           <% member.teams.all.each do |team| %>
           <td><%= team.name %></td>
