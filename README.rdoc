@@ -2,17 +2,17 @@
 
 This is an application designed for a single organization.
 
-______________________________________________________________
+________________________
 Instructions:
 
 http://People-Person.herokuapp.com
 
 You Can:
-   - Create new Members with:
+   - Create/delete Members with:
         - a name
         - Unique email address
 
-   - Create new Teams with:
+   - Create/delete Teams with:
         - a name
         - short description
 
@@ -22,23 +22,22 @@ When you visit each teams profile page, there is an option to:
     
     - "Organize Pairs"
 
-This will then trigger actions to create:
+This will take you to the teams page where you can:
   
-    - randomized pairs within each team
-    - emails to the entire team, displaying the pairs for that "week"
-       (a.k.a. whenever you click it)
+    - edit or delete a team
+    - randomized pairs within each team by clicking "Match Team?"
+       - This will email the entire team, displaying the pairs for that "week"
+         (a.k.a. whenever you click it)
 
-______________________________________________________________
+________________________
 NittyGritty:
 
 Design:
-  I used foundation-zurb as the front-end framework. Its simplicity and grace made for easily navigable paths, essential in a simple application such as People-Person.
+  I used foundation-zurb as the front-end framework. Its simplicity and grace made for easily navigable paths, especially essential in a small application such as People-Person.
 
 Testing:
   I used rspec & capybara, in addition to this sweet gem pair called "better_errors" & "binding_of_caller" to drive the TDD. 
 
-I have to admit this app is not the full spec of IFTTT. I got caught up in issues of structure when deciding how I should store the past_pairs in a DB table. I ended up taking the route of randomizing each set of pairs for clean completion purposes. 
-
-But hey, that is why I would love this apprenticeship!  
-To get better at software architechture and breaking down hard problems in ruby code :)
+It is not perfect... But hey, that is why I would love this apprenticeship... 
+I really want to get better at software architecture and breaking down hard problems with ruby code :)
 
