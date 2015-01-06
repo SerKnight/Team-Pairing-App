@@ -45,9 +45,3 @@ Member.create([
         { name: 'Kibah', email: "dog3@mail.com" },
         { name: 'luna', email: "moonDoggie@mail.com" }
 ])
-
-Team.delete_all
-Team.create([
-        { name: 'designers', description: "Designers are artists trapped on laptops" },
-        { name: 'developers', description: "Developers make the digital world go round" }
-])
