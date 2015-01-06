@@ -48,6 +48,6 @@ Member.create([
 
 Team.delete_all
 Team.create([
-        { name: 'designers', description: "Our designers have a huge impact on all of our current and future products. No pigeonholes here - your influence will be felt at every step of the product lifecycle, from concept & design, development, QA and launch, refinement and even ongoing optimization." },
-        { name: 'developers', description: "As our Ruby on Rails Developer, you’ll be working with the seasoned team behind products like SlideDeck, Hello Bar and Flare, as we take our next big step - Filament. As a key member of our Products Division, you’ll be responsible for building systems and bringing app concepts to life for our growing userbase of thousands. Join us in our mission to make the web better!" }
+        { name: 'designers', description: "Designers are artists trapped on laptops" },
+        { name: 'developers', description: "Developers make the digital world go round" }
 ])
