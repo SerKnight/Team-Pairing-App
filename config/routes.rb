@@ -4,5 +4,5 @@ PeoplePerson::Application.routes.draw do
   end
 
   resources :members
-  root :to => "members#index"
+  root :to => "teams#index"
 end
